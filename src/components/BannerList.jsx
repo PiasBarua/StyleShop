@@ -35,7 +35,7 @@ const BannerList = () => {
   const debouncedSetCurrent = useCallback(
     debounce((nextIndex) => {
       setCurrent(nextIndex);
-    }, 500), // 500ms delay; adjust as needed
+    },100), // 500ms delay; adjust as needed
     []
   );
 
@@ -43,7 +43,7 @@ const BannerList = () => {
     const interval = setInterval(() => {
       const nextIndex = current === length - 1 ? 0 : current + 1;
       debouncedSetCurrent(nextIndex);
-    }, 5000); // Change slide every 5000ms (5 seconds)
+    }, 2000); // Change slide every 5000ms (5 seconds)
 
     return () => {
       clearInterval(interval);

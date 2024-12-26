@@ -1,15 +1,15 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Navbar from './components/Navbar';
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Register from './pages/Register';
-import Products from './pages/Products';
-import NotFound from './pages/NotFound';
-import { CartProvider } from './contexts/CartContext';
-import { UserProvider } from './contexts/UserContext';
-import ProtectedRoute from './components/ProtectedRoute';
-import CartSlide from './components/CartSlide'; 
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Register from "./pages/Register";
+import Products from "./pages/Products";
+import NotFound from "./pages/NotFound";
+import { CartProvider } from "./contexts/CartContext";
+import { UserProvider } from "./contexts/UserContext";
+import ProtectedRoute from "./components/ProtectedRoute";
+import CartSlide from "./components/CartSlide";
 
 function App() {
   return (
@@ -17,7 +17,7 @@ function App() {
       <CartProvider>
         <Router>
           <Navbar />
-          <CartSlide /> 
+          <CartSlide />
           <Routes>
             <Route
               path="/"
@@ -27,7 +27,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            {/* Dynamic Route for Categories */}
             <Route
               path="/products/:category"
               element={
@@ -36,7 +35,6 @@ function App() {
                 </ProtectedRoute>
               }
             />
-            {/* Not Found for Invalid Categories */}
             <Route path="/notfound" element={<NotFound />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
@@ -50,4 +48,3 @@ function App() {
 }
 
 export default App;
-

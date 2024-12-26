@@ -20,7 +20,7 @@ const Categories = () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <h2 className="text-3xl font-semibold text-center text-emerald-500 mb-8">
+      <h2 className="text-4xl font-semibold text-center text-emerald-500 mb-8 font-Lobster">
         Product Categories
       </h2>
       <div className="flex flex-wrap justify-center gap-6">
